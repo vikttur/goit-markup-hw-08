@@ -1,0 +1,42 @@
+.contact {
+	@extend .flex-container;
+	
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	&__link {
+		@extend .link;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	&__text {
+		font-weight: 500;
+		line-height: 1.14;
+	letter-spacing: 0.02em;
+	}
+
+	&__bgr-icon {
+		display: flex;
+		align-items: center;
+
+		color: var(--color-main);
+	}
+
+	&__icon:hover {
+		color: var(--color-accent);
+	}
+
+	&__icon {
+		display: inline-block;
+		margin-right: 10px;
+		fill: currentColor;
+	}
+}
+

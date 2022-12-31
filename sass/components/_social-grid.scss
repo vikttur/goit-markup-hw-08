@@ -1,0 +1,26 @@
+.social {
+	@extend %list;
+	@extend .flex-container;
+
+	&__item {
+		width: 44px;
+		height: 44px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 10px;
+	}
+
+	&__icon {
+		fill: currentColor;
+	}
+
+	&__link {
+		@extend .flex-container;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,61 @@
+.team {
+	@extend %indent-in-section;
+	background-color: var(--color-bgr-alternative);
+
+	&__heading {
+		margin-bottom: 50px;
+	}
+
+	&__card {
+		width: 270px;
+		
+		background-color: var(--color-bgr-head);
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+			0px 1px 1px rgba(0, 0, 0, 0.14),
+			0px 2px 1px rgba(0, 0, 0, 0.2);
+		border-radius: 0px 0px 4px 4px;
+	}
+
+	&__description {
+		padding: 30px 32px;
+		text-align: center;
+	}
+
+	&__name {
+		margin-bottom: 10px;
+			
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.19;
+		color: var(--color-header);
+	}
+
+	&__profession {
+		margin-bottom: 16px;
+
+		font-size: 16px;
+		line-height: 1.19;
+	}
+
+	&__link {
+		background-color: var(--color-bgr-head);
+		color: var(--color-icon);
+
+		transition:
+			background-color var(--time-animation) var(--timing-function),
+			color var(--time-animation) var(--timing-function);
+	}
+
+	&__link:hover,
+	&__link:focus {
+		background-color: var(--color-accent);
+		color: var(--color-bgr-head);
+	}
+}
+
+.social__icon {
+	.team__link:hover &,
+	.team__link:focus & {
+		fill: var(--color-bgr-head);
+	}
+}

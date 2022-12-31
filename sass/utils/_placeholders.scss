@@ -1,0 +1,54 @@
+%button {
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	font-size: 16px;
+
+	cursor: pointer;
+}
+
+%button-main {
+	@extend %button;
+	background-color: var(--color-accent);
+	
+	font-weight: 700;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+	color: var(--color-bgr-head);
+	
+	border: none;
+}
+
+%container-position {
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+%indent-in-section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+%list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+%visually-hidden {
+	position: absolute;
+	padding: 0;
+	margin: -1px;
+
+	width: 1px;
+	height: 1px;
+
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

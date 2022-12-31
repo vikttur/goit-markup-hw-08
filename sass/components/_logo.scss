@@ -1,0 +1,19 @@
+.logo {
+	display: inline-block;	
+
+	font-family: $font-logo;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	color: var(--color-accent);
+	text-decoration: none;
+	font-style: normal;
+
+	&__header {
+		color: var(--color-logo);
+	}
+
+	&__footer {
+		color: var(--color-bgr-head);
+	}
+}

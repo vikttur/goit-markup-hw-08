@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WebStudio</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container header__container">
+			<nav class="header__nav">
+				<a href="./index.html" class="logo">
+					Web<span class="logo__header">Studio</span>
+				</a>
+				<ul class="navigation header__navigation">
+					<li class="navigation__item"><a href="./index.html" class="navigation__link">Студія</a></li>
+					<li class="navigation__item"><a href="./portfolio.html" class="navigation__link current">Портфоліо</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+				</ul>
+			</nav>
+			<ul class="contact header__contact">
+				<li class="contact__item">
+					<a href="mailto:info@devstudio.com" class="contact__link contact__text contact__bgr-icon">
+						<svg class="contact__icon" width="16" height="12">
+							<use href="./images/icons.svg#envelope"></use>
+						</svg>
+						info@devstudio.com
+					</a>
+				</li>
+				<li class="contact__item">
+					<a href="tel:+380961111111" class="contact__link contact__text contact__bgr-icon">
+						<svg class="contact__icon" width="10" height="16">
+							<use href="./images/icons.svg#smartphone"></use>
+						</svg>
+						+38 096 111 11 11
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<section class="portfolio">
+			<div class="container">
+				<h1 class="portfolio__heading">Наші проекти</h1>
+				<ul class="grid portfolio__grid-button">
+					<li class="portfolio__item"><button type="button" class="portfolio__button">Усі</button></li>
+					<li class="portfolio__item"><button type="button" class="portfolio__button">Веб-сайти</button></li>
+					<li class="portfolio__item"><button type="button" class="portfolio__button">Додатки</button></li>
+					<li class="portfolio__item"><button type="button" class="portfolio__button">Дизайн</button></li>
+					<li class="portfolio__item"><button type="button" class="portfolio__button">Маркетинг</button></li>
+				</ul>
+
+				<ul class="projects">
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_1.jpg" width="370" alt="Сторінка сайту">
+								<p class="projects__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+									сервісів.
+									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Технокряк</h2>
+								<p class="projects__application">Веб-сайт</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_2.jpg" width="370" alt="На постері баскетболісти з м'ячем">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+								<p class="projects__application">Дизайн</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_3.jpg" width="370" alt="Логотип ресторану">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Ресторан <span lang="en">Seafood</span></h2>
+								<p class="projects__application">Додаток</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_4.jpg" width="370" alt="Аудіонавушники">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Проєкт <span lang="en">Prime</span></h2>
+								<p class="pprojects__application">Маркетинг</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_5.jpg" width="370" alt="Дві коробки різного розміру та кольору">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Проєкт <span lang="en">Boxes</span></h2>
+								<p class="projects__application">Додаток</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_6.jpg" width="370" alt="На моніторі сторінка сайту">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name" lang="en">Inspiration has no Borders</h2>
+								<p class="projects__application">Веб-сайт</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_7.jpg" width="370" alt="Розворот книги">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Видання <span lang="en">Limited Edition</span></h2>
+								<p class="projects__application">Дизайн</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_8.jpg" width="370" alt="Бірка з написом 'Lab el tag'">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects__name">Проєкт <span lang="en">Lab</span></h2>
+								<p class="projects__application">Маркетинг</p>
+							</div>
+						</a>
+					</li>
+					<li class="projects__item">
+						<a href="#" class="projects__link">
+							<div class="projects__relation">
+								<img src="./images/development_9.jpg" width="370" alt="На екрані ноутбука сторінка додатку">
+								<p class="projects__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Consequuntur non laborum possimus distinctio ratione qui dolore.
+									Obcaecati ab consequuntur nesciunt architecto doloremque.
+								</p>
+							</div>
+							<div class="projects__description">
+								<h2 class="projects-__name" lang="en">Growing Business</h2>
+								<p class="pprojects__application">Додаток</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container footer__container">
+			<div class="footer__address">
+				<a href="./index.html" class="logo footer__logo">
+					Web<span class="logo__footer">Studio</span>
+				</a>
+				<address>
+					<ul class="footer__list">
+						<li>
+							<a href="https://goo.gl/maps/BBAmJtsua18arhCD6" class="footer__text footer__link" target="_blank"
+								rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26
+							</a>
+						</li>
+						<li><a href="mailto:info@devstudio.com" class="footer__contact footer__link">info@devstudio.com</a></li>
+						<li><a href="tel:+380961111111" class="footer__contact footer__link">+38 096 111 11 11</a></li>
+					</ul>
+				</address>
+			</div>
+			<div>
+				<p class="footer__appeal">Приєднуйтесь</p>
+				<ul class="social">
+					<li class="social__item">
+						<a href="#" class="social__link footer__link">
+							<svg class="social__icon" width="20" height="20">
+								<use href="./images/icons.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link footer__link">
+							<svg class="social__icon" width="20" height="20">
+								<use href="./images/icons.svg#twitter"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link footer__link">
+							<svg class="social__icon" width="20" height="20">
+								<use href="./images/icons.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link footer__link">
+							<svg class="social__icon" width="20" height="20">
+								<use href="./images/icons.svg#linkedin"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="subscription footer__subscription">
+				<form>
+					<label for="subscription" class="footer__appeal">Підпишіться на розсилку</label>
+					<div class="subscription__wrapper">
+						<input class="subscription__input" type="text" placeholder="E-mail" name="subscription" id="subscription">
+						<button type="submit" class="subscription__button">Підписатися
+							<svg class="subscription__icon" width="24" height="24">
+								<use href="./images/icons.svg#send"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+@import './utils/variables';
+@import './base/normalize';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+@import './base/reset';
+@import './base/common';
+
+@import './components/container';
+@import './components/logo';
+@import './components/social-grid';
+
+@import './components/navigation';
+@import './components/contacts';
+@import './components/page-header';
+
+@import './components/section-hero';
+
+@import './components/section-principles';
+@import './components/section-work';
+
+@import './components/section-team';
+@import './components/section-clients';
+
+@import './components/page-footer';
+@import './components/subscription';
+
+@import './components/section-portfolio';
+@import './components/projects';
+
+@import './components/_entry-field';
+@import './components/_consent';
+@import './components/modal-form';
