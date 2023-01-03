@@ -30,19 +30,16 @@
 		color: var(--color-bgr-head);
 	}
 
-	&__link {
+	&__link-address {
 		@extend .link;
-		background-color: var(--color-bgr-icon);
 		color: var(--color-bgr-head);
 
 		transition:
-			background-color var(--time-animation) var(--timing-function),
 			color var(--time-animation) var(--timing-function);
 		}
 
-	&__link:hover,
-	&__link:focus {
-		background-color: var(--color-accent);
+	&__link-address:hover,
+	&__link-address:focus {
 		color: var(--color-accent);
 	}
 
@@ -57,11 +54,25 @@
 	&__subscription {
 		margin-left: auto;
 	}
+
+	&__link-icon {
+		background-color: var(--color-bgr-icon);
+		color: var(--color-bgr-head);
+
+		transition:
+			background-color var(--time-animation) var(--timing-function),
+			color var(--time-animation) var(--timing-function);
+	}
+
+	&__link-icon:hover,
+	&__link-icon:focus {
+		background-color: var(--color-accent);
+	}
 }
 
 .social__icon {
-	.footer__link:hover &,
-	.footer__link:focus & {
+	.footer__link-icon:hover &,
+	.footer__link-icon:focus & {
 		fill: var(--color-bgr-head);
 	}
 }
