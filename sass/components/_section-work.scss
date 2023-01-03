@@ -1,4 +1,10 @@
 .work {
+	display: none;
+
+	@media screen and (min-width: $desktop) {
+		display: contents;
+	}
+
 	@extend %indent-in-section;
 	padding-top: 0;
 
