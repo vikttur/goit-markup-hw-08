@@ -7,7 +7,11 @@
 @import './base/reset';
 @import './base/common';
 
-@import './components/container';
+@import './components/mobile/index';
+@import './components/tablet/index';
+@import './components/zdesktop/index';
+
+@import './components/flex-container';
 @import './components/logo';
 @import './components/social-grid';
 
@@ -18,7 +22,6 @@
 @import './components/section-hero';
 
 @import './components/section-principles';
-@import './components/section-work';
 
 @import './components/section-team';
 @import './components/section-clients';
