@@ -1,5 +1,10 @@
 .portfolio {
-	@extend %indent-in-section;
+	@include indent-in-section ($mobile-padding);
+	padding-top: 40px;
+		
+	@media screen and (min-width: $desktop) {
+		@include indent-in-section ($desktop-padding);
+	}
 
 	&__heading {
 		@extend %visually-hidden;

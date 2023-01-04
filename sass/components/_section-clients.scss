@@ -1,5 +1,9 @@
 .clients {
-	@extend %indent-in-section;
+	@include indent-in-section ($mobile-padding);
+	
+	@media screen and (min-width: $desktop) {
+		@include indent-in-section ($desktop-padding);
+	}
 
 	&__heading {
 		margin-bottom: 50px;

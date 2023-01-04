@@ -1,5 +1,10 @@
 .team {
-	@extend %indent-in-section;
+	@include indent-in-section ($mobile-padding);
+	
+	@media screen and (min-width: $desktop) {
+		@include indent-in-section ($desktop-padding);
+	}
+	
 	background-color: var(--color-bgr-alternative);
 
 	&__heading {

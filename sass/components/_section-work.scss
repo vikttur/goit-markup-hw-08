@@ -1,10 +1,16 @@
 .work {
+	display: none;
+
 	@media screen and (min-width: $desktop) {
 		display: contents;
 	}
+	
+	@include indent-in-section ($mobile-padding);
 
-	@extend %indent-in-section;
-	padding-top: 0;
+	@media screen and (min-width: $desktop) {
+		@include indent-in-section ($desktop-padding);
+		padding-top: 0;
+	}
 
 	&__heading {
 		margin-bottom: 50px;

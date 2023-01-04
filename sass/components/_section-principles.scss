@@ -1,12 +1,16 @@
 .principles {
-	@extend %indent-in-section;
+	@include indent-in-section ($mobile-padding);
+
+	@media screen and (min-width: $desktop) {
+		@include indent-in-section ($desktop-padding);
+	}
 
 	&__heading {
 		@extend %visually-hidden;
 	}
 
 	&__item {
-		width: 270px;
+		width: 100%;
 	}
 
 	&__item-header {
@@ -27,5 +31,9 @@
 		justify-content: center;
 		background-color: var(--color-bgr-alternative);
 		border-radius: 4px;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 30px;
 	}
 }
