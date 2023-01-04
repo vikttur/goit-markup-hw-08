@@ -33,10 +33,17 @@ img {
 
 .section-heading {	
 		font-weight: 700;
-		font-size: 36px;
-		line-height: 1.28;
+		font-size: 28px;
+		line-height: 1.18;
 		text-align: center;
 		color: var(--color-header);
+}
+
+@media screen and (min-width: $desktop) {
+	.section-heading {
+		font-size: 36px;
+		line-height: 1.28;
+	}
 }
 
 .current {

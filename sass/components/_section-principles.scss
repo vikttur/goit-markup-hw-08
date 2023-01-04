@@ -72,7 +72,7 @@
 
 @media screen and (min-width: $desktop) {
 	.principles__grid {
-			flex-wrap: nowrap;
+		flex-wrap: nowrap;
 	}
 
 	.principles__item:not(:nth-last-child(-n+2)) {
