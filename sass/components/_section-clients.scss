@@ -56,12 +56,14 @@
 		}
 
 		&__item {
+			margin: 0;
 			width: calc((100% - 30px) / 2);
 		}
 	}
 
 	@media screen and (min-width: $tablet) {
 		&__item {
+			margin: 0;
 			width: calc((100% - 60px) / 3);
 		}
 	}

@@ -10,15 +10,15 @@
 	}
 
 	&__grid {
-		@include flex-container ();
-		flex-direction: column;
-		gap: 30px;
-
 		@extend %list;
 	}
 
 	&__item {
 		width: 100%;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 30px;
 	}
 
 	&__item-header {
@@ -40,22 +40,46 @@
 		background-color: var(--color-bgr-alternative);
 		border-radius: 4px;
 	}
+}
 
-	// change styles for viewport width
-	@media screen and (min-width: $tablet) {
-		&__grid {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-		
-		&__item {
-			width: calc((100% - 30px) / 2);
-		}
+@media screen and (min-width: $mobile) {
+	.principles__item:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.principles__grid {
+		@include flex-container ();
+		flex-wrap: wrap;
+	}
+	
+	.principles__item {
+		width: calc((100% - 30px) / 2);
+	}
+	
+	.principles__item:not(:nth-child(2n)) {
+		margin-right: 30px;
+	}
+	.principles__item:not(:last-child) {
+		margin-bottom: 0;
 	}
 
-	@media screen and (min-width: $desktop) {
-		&__grid {
-			flex-wrap: nowrap;
-		}
+	.principles__item:not(:nth-last-child(-n+2)) {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.principles__grid {
+		flex-wrap: nowrap;
+	}
+
+	.principles__item:not(:nth-last-child(-n+2)) {
+		margin-bottom: 0;
+	}
+
+	.principles__item:not(:last-child) {
+		margin-right: 30px;
 	}
 }

@@ -58,17 +58,10 @@
 	}
 
 	&__placeholder::placeholder {
-		font-size: 14px;
-		line-height: 1.14;
+		font-size: 12px;
+		line-height: 1.17;
 		letter-spacing: 0.01em;
 		color: rgba(117, 117, 117, 0.5);
-	}
-
-	@media screen and (min-width: $desktop) {
-		&__placeholder::placeholder {
-			font-size: 12px;
-			line-height: 1.17;
-		}
 	}
 }
 
