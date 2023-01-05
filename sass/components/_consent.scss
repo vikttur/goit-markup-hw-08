@@ -7,7 +7,6 @@
 	color: var(--color-main);
 }
 
-
 .consent {
 	&__checkbox {
 		@extend %visually-hidden;
@@ -25,6 +24,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		font-size: 12px;
+		line-height: 1.17;
+	}
+
+	@media screen and (min-width: $desktop) {
+		&__label {
+			font-size: 14px;
+			line-height: 1.71;
+		}
 	}
 
 	&__icon {

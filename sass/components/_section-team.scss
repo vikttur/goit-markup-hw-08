@@ -12,6 +12,10 @@
 	}
 
 	&__grid {
+		@include flex-container ();
+		flex-direction: column;
+		gap: 30px;
+
 		@extend %list;
 	}
 
@@ -23,10 +27,6 @@
 			0px 1px 1px rgba(0, 0, 0, 0.14),
 			0px 2px 1px rgba(0, 0, 0, 0.2);
 		border-radius: 0px 0px 4px 4px;
-	}
-
-	&__card:not(:last-child) {
-		margin-bottom: 30px;
 	}
 
 	&__description {
@@ -65,56 +65,37 @@
 		background-color: var(--color-accent);
 		color: var(--color-bgr-head);
 	}
+
+	// change styles for viewport width
+	@media screen and (min-width: $tablet) {
+		&__grid {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: calc((100% - 30px) / 2);
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		&__heading {
+			margin-bottom: 50px;
+		}
+
+		&__description {
+			padding-bottom: 30px;
+		}
+
+		&__grid {
+			flex-wrap: nowrap;
+		}
+	}
 }
 
 .social__icon {
 	.team__link:hover &,
 	.team__link:focus & {
 		fill: var(--color-bgr-head);
-	}
-}
-
-@media screen and (min-width: $tablet) {
-	.team__grid {
-		@include flex-container ();
-		flex-wrap: wrap;
-	}
-
-	.team__card {
-		width: calc((100% - 30px) / 2);
-	}
-
-	.team__card:not(:nth-child(2n)) {
-		margin-right: 30px;
-	}
-
-	.team__card:not(:last-child) {
-		margin-bottom: 0;
-	}
-
-	.team__card:not(:nth-last-child(-n+2)) {
-		margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: $desktop) {
-	.team__heading {
-		margin-bottom: 50px;
-	}
-
-	.team__description {
-		padding-bottom: 30px;
-	}
-
-	.team__grid {
-		flex-wrap: nowrap;
-	}
-
-	.team__card:not(:nth-last-child(-n+2)) {
-		margin-bottom: 0;
-	}
-
-	.team__card:not(:last-child) {
-		margin-right: 30px;
 	}
 }
