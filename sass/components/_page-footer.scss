@@ -1,15 +1,11 @@
 .footer {
 	padding: 60px 0;
 	background-color: var(--color-bgr-footer);
+	text-align: center;
 
-	&__container {
-		display: flex;
-		align-items: baseline;
-	}
-
-	&__address {
-		margin-right: 30px;
-		width: 270px;
+	&__address,
+	&__appeal {
+		margin-bottom: 60px;
 	}
 
 	&__logo {
@@ -20,7 +16,7 @@
 		@extend %list;
 	}
 
-	&__appeal {
+	&__header {
 		display: block;
 		margin-bottom: 20px;
 	
@@ -51,10 +47,6 @@
 		color: var(--color-footer-contact);
 	}
 
-	&__subscription {
-		margin-left: auto;
-	}
-
 	&__link-icon {
 		background-color: var(--color-bgr-icon);
 		color: var(--color-bgr-head);
@@ -67,6 +59,40 @@
 	&__link-icon:hover,
 	&__link-icon:focus {
 		background-color: var(--color-accent);
+	}
+
+	// change styles for viewport width
+	@media screen and (min-width: $tablet) {
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: baseline;
+		}
+
+		&__address {
+			margin-right: 165px;
+			margin-bottom: 60px;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		& {
+			text-align: left;
+		}
+
+		&__address {
+			margin-right: 70px;
+			margin-bottom: 0;
+		}
+
+		&__appeal {
+			margin: 0;
+		}
+
+		&__subscription {
+			margin-left: auto;
+		}
 	}
 }
 

@@ -10,6 +10,10 @@
 	}
 
 	&__grid {
+		@include flex-container ();
+		flex-direction: column;
+		gap: 30px;
+
 		@extend %list;
 	}
 
@@ -17,10 +21,6 @@
 		width: 100%;
 		height: 92px;
 		box-sizing: border-box;
-	}
-
-	&__item:not(:last-child) {
-		margin-bottom: 30px;
 	}
 
 	&__link {
@@ -47,45 +47,34 @@
 	&__icon {
 		fill: currentColor;
 	}
-}
 
-@media screen and (min-width: $tablet) {
-	.clients__grid {
-		@include flex-container ();
-		flex-wrap: wrap;
+	// change styles for viewport width
+	@media screen and (min-width: $mobile) {
+		&__grid {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			margin: 0;
+			width: calc((100% - 30px) / 2);
+		}
 	}
 
-	.clients__item {
-		width: calc((100% - 30px) / 2);
+	@media screen and (min-width: $tablet) {
+		&__item {
+			margin: 0;
+			width: calc((100% - 60px) / 3);
+		}
 	}
 
-	.clients__item:not(:nth-child(2n)) {
-		margin-right: 30px;
-	}
+	@media screen and (min-width: $desktop) {
+		&__heading {
+			margin-bottom: 50px;
+		}
 
-	.clients__item:not(:last-child) {
-		margin-bottom: 0;
-	}
-
-	.clients__item:not(:nth-last-child(-n+2)) {
-		margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: $desktop) {
-	.clients__heading {
-		margin-bottom: 50px;
-	}
-
-	.clients__grid {
-		flex-wrap: nowrap;
-	}
-
-	.clients__item:not(:nth-last-child(-n+2)) {
-		margin-bottom: 0;
-	}
-
-	.clients__item:not(:last-child) {
-		margin-right: 30px;
+		&__grid {
+			flex-wrap: nowrap;
+		}
 	}
 }
