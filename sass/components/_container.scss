@@ -5,7 +5,6 @@
 	padding-right: 15px;
 
 	@extend %container-position;
-														// background-color: #efefef;
 
 	@media screen and (min-width: $mobile) {
 		width: $mobile;

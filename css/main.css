@@ -1,6 +1,6 @@
 :root {
   --color-accent: #2196f3;
-  --color-btn-active: #188ce8;
+  --color-btn-active: hsl(207, 82%, 50%);
   --color-main: #757575;
   --color-header: #212121;
   --color-logo: #000000;
@@ -185,7 +185,7 @@ summary {
   margin-bottom: 0;
 }
 
-.projects, .footer__list, .clients__grid, .team__grid, .principles__grid, .social, .grid {
+.projects, .footer__list, .clients__grid, .team__grid, .principles__grid, .menu-container__list, .social, .grid {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -216,7 +216,7 @@ p {
   margin-bottom: 0;
 }
 
-.link, .footer__link-address, .contact__link, .navigation__link,
+.link, .footer__link-address, .contact__link, .navigation__link, .social-media__link, .menu-container__link,
 .logo-link {
   text-decoration: none;
   font-style: normal;
@@ -242,11 +242,11 @@ img {
   margin-right: auto;
 }
 
-.link, .footer__link-address, .contact__link, .navigation__link {
+.link, .footer__link-address, .contact__link, .navigation__link, .social-media__link, .menu-container__link {
   color: var(--color-main);
   transition: color var(--time-animation) var(--timing-function);
 }
-.link:hover, .footer__link-address:hover, .contact__link:hover, .navigation__link:hover, .link:focus, .footer__link-address:focus, .contact__link:focus, .navigation__link:focus {
+.link:hover, .footer__link-address:hover, .contact__link:hover, .navigation__link:hover, .social-media__link:hover, .menu-container__link:hover, .link:focus, .footer__link-address:focus, .contact__link:focus, .navigation__link:focus, .social-media__link:focus, .menu-container__link:focus {
   color: var(--color-accent);
 }
 
@@ -269,18 +269,17 @@ img {
   color: var(--color-accent);
 }
 
-@media screen and (min-width: 768px) {
-  .current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    background-color: var(--color-accent);
-    border-radius: 2px;
-  }
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
 }
+
 .grid__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -382,11 +381,16 @@ img {
 
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   background-color: var(--color-bgr-head);
   z-index: 999;
   transform: translateX(100%);
@@ -395,28 +399,48 @@ img {
 .menu-container.is-open {
   transform: translateX(0);
 }
+.menu-container__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-container__item:last-child {
+  margin-bottom: 64px;
+}
+.menu-container__link {
+  color: var(--color-header);
+}
+.menu-container__contact {
+  display: flex;
+  flex-direction: column;
+}
+.menu-container__text-nav {
+  font-size: 40px;
+  line-height: 1.18;
+}
+.menu-container__text-tel {
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--color-accent);
+}
+@media screen and (max-width: 480px) {
+  .menu-container__text-tel {
+    font-size: 26px;
+    line-height: 1.18;
+  }
+}
+.menu-container__text-mail {
+  font-size: 24px;
+  line-height: 1.17;
+  color: var(--color-main);
+}
 .menu-container .menu-toggle {
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-.mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.mobile-menu__link {
-  display: block;
-  padding: 10px;
-  color: red;
-  text-decoration: none;
-}
-
 .social-media {
   display: flex;
   flex-wrap: wrap;
-  color: var(--color-accent);
 }
 .social-media__item {
   display: flex;
@@ -424,9 +448,16 @@ img {
   align-items: center;
   justify-content: baseline;
   position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 }
 .social-media__item:not(:last-child) {
   margin-right: 10px;
+}
+.social-media__item:not(:first-child) {
+  margin-left: 10px;
 }
 .social-media__item:nth-child(n+2)::after {
   content: "";
@@ -439,6 +470,9 @@ img {
   left: -10%;
   transform-origin: bottom left;
   transform: rotate(-90deg);
+}
+.social-media__link {
+  color: var(--color-accent);
 }
 
 .navigation__item {
