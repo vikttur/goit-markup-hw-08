@@ -1,9 +1,15 @@
 .header {
+	position: relative;
 	border-bottom: 1px solid var(--color-border-section);
+
 
 	&__container {
 		display: flex;
 		align-items: center;
+
+		@media screen and (max-width: $mobile-max) {
+			justify-content: space-between;
+		}
 	}
 
 	&__nav {
@@ -14,19 +20,29 @@
 	}
 
 	&__navigation {
-		margin-left: 93px;
+		@media screen and (max-width: $mobile-max) {
+			display: none;
+		}
+
+		margin-left: 88px;
+
+		@media screen and (min-width: $desktop) {
+			margin-left: 93px;
+		}
 	}
 
 	&__contact {
+		@media screen and (max-width: $mobile-max) {
+			display: none;
+		}
+
+		display: flex;
+		flex-direction: column;
+		margin: 0;
 		margin-left: auto;
-	}
-	
-	// change styles for viewport width
-	@media screen and (min-width: $tablet) {
 
-	}
-
-	@media screen and (min-width: $desktop) {
-
+		@media screen and (min-width: $desktop) {
+			flex-direction: row;
+		}
 	}
 }

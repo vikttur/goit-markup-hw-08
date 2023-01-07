@@ -5,6 +5,9 @@
 	width: 100%;
 	height: 100%;
 
+	padding: 94px 15px;
+	overflow-y: scroll;
+
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
 	transition:
@@ -27,15 +30,15 @@
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	// top: 50%;
-	// left: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
-	width:100vw;
+	// width: 450px;
 	max-width: 450px;
 	padding: 40px;
 
 	font-family: inherit;
-
 	justify-content: center;
 	align-items: center;
 
@@ -107,6 +110,10 @@
 
 	// change styles for viewport width
 	@media screen and (min-width: $tablet) {
+		// .backdrop {
+		// 		padding: 208px 159px;
+		// }
+
 		& {
 			top: 50%;
 			left: 50%;

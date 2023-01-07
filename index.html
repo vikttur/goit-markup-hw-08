@@ -46,6 +46,12 @@
 					</a>
 				</li>
 			</ul>
+
+			<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+				<svg class="menu-toggle__icon" width="40" height="40" aria-label="кнопка відкриття мобільного меню">
+					<use href="./images/icons.svg#menu_open"></use>
+				</svg>
+			</button>
 		</div>
 	</header>
 
@@ -106,17 +112,17 @@
 				<h2 class="section-heading work__heading">Чим ми займаємося</h2>
 				<ul class="grid">
 					<li class="grid__item work__grid">
-						<img srcset="./images/work1_370.jpg 1x, ./images/work1_370@2x.jpg 2x" src="./images/work1_370.jpg"
+						<img srcset="./images/work1_370.jpg 370w, ./images/work1_370@2x.jpg 740w" src="./images/work1_370.jpg"
 							sizes="370px" alt="Десктопні додатки">
 						<p class="work__description">Десктопні додатки</p>
 					</li>
 					<li class="grid__item work__grid">
-						<img srcset="./images/work2_370.jpg 1x, ./images/work2_370@2x.jpg 2x" src="./images/work2_370.jpg"
+						<img srcset="./images/work2_370.jpg 370w, ./images/work2_370@2x.jpg 740w" src="./images/work2_370.jpg"
 							sizes="370px" alt="Мобільні додатки">
 						<p class="work__description">Мобільні додатки</p>
 					</li>
 					<li class="grid__item work__grid">
-						<img srcset="./images/work3_370.jpg 1x, ./images/work3_370@2x.jpg 2x" src="./images/work3_370.jpg"
+						<img srcset="./images/work3_370.jpg 370w, ./images/work3_370@2x.jpg 740w" src="./images/work3_370.jpg"
 							sizes="370px" alt="Дизайнерські рішення">
 						<p class="work__description">Дизайнерські рішення</p>
 					</li>
@@ -415,6 +421,57 @@
 		</div>
 	</footer>
 
+	<!-- меню -->
+	<div class="menu-container js-menu-container" id="mobile-menu">
+		<button class="menu-toggle js-close-menu">
+			<svg class="menu-toggle__icon" width="40" height="40" aria-label="кнопка закриття мобільного меню">
+				<use href="./images/icons.svg#menu-close"></use>
+			</svg>
+		</button>
+
+		<nav class="header__nav">
+			<ul class="navigation header__navigation">
+				<li class="navigation__item"><a href="./index.html" class="navigation__link current">Студія</a></li>
+				<li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+			</ul>
+		</nav>
+
+		<ul class="contact header__contact">
+			<li class="contact__item">
+				<a href="mailto:info@devstudio.com" class="contact__link contact__text contact__bgr-icon">
+					<svg class="contact__icon" width="16" height="12">
+						<use href="./images/icons.svg#envelope"></use>
+					</svg>
+					info@devstudio.com
+				</a>
+			</li>
+			<li class="contact__item">
+				<a href="tel:+380961111111" class="contact__link contact__text contact__bgr-icon">
+					<svg class="contact__icon" width="10" height="16">
+						<use href="./images/icons.svg#smartphone"></use>
+					</svg>
+					+38 096 111 11 11
+				</a>
+			</li>
+		</ul>
+
+		<ul class="social-media list">
+			<li class="social-media__item">
+				<a href="#" class="social-media__link" lang="en">Instagram</a>
+			</li>
+			<li class="social-media__item">
+				<a href="#" class="social-media__link" lang="en">Twitter</a>
+			</li>
+			<li class="social-media__item">
+				<a href="#" class="social-media__link" lang="en">Facebook</a>
+			</li>
+			<li class="social-media__item">
+				<a href="#" class="social-media__link" lang="en">LinkedIn</a>
+			</li>
+		</ul>
+	</div>
+
 	<!-- модалка -->
 	<div data-modal class="backdrop is-hidden">
 		<form class="feedback-form">
@@ -476,7 +533,35 @@
 		</form>
 	</div>
 
+	<script src="./js/menu.js"></script>
 	<script src="./js/modal.js"></script>
 </body>
 
 </html>
+
+<!-- <div class="menu-container" id="menu-container" data-menu>
+					<div class="navigation">
+					<ul class="navigation header__navigation">
+						<li class="navigation__item"><a href="./index.html" class="navigation__link current">Студія</a></li>
+						<li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+					</ul>
+					</div>
+					<div class="contacts">
+						77777
+					</div>  -->
+
+<!-- <ul class="social-media list">
+																<li class="social-media__item">
+																	<a href="#" class="social-media__link" lang="en">Instagram</a>
+																</li>
+																<li class="social-media__item">
+																	<a href="#" class="social-media__link" lang="en">Twitter</a>
+																</li>
+																<li class="social-media__item">
+																	<a href="#" class="social-media__link" lang="en">Facebook</a>
+																</li>
+																<li class="social-media__item">
+																	<a href="#" class="social-media__link" lang="en">LinkedIn</a>
+																</li>
+															</ul> -->
