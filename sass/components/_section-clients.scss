@@ -48,18 +48,16 @@
 		fill: currentColor;
 	}
 
-	// change styles for viewport width
-	@media screen and (min-width: $mobile) {
-		&__grid {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-
-		&__item {
-			width: calc((100% - 30px) / 2);
-		}
+	&__grid {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
+	&__item {
+		width: calc((100% - 30px) / 2);
+	}
+
+	// change styles for viewport width
 	@media screen and (min-width: $tablet) {
 		&__item {
 			width: calc((100% - 60px) / 3);

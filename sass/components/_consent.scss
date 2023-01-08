@@ -21,7 +21,7 @@
 	}
 
 	&__label {
-		display: flex;
+		@include flex-container;
 		justify-content: center;
 		align-items: center;
 
@@ -58,7 +58,7 @@
 	}
 
 	&__text {
-		margin-right: 4px;
+		margin-right: 2px;
 	}
 
 	&__link {

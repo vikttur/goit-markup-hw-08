@@ -37,10 +37,6 @@
 	padding: 40px;
 	width: 450px;
 	
-	@media screen and (max-width: $mobile) {
-		width: 95%;
-	}
-	
 	@media screen and (min-width: $desktop) {
 		top: 50%;
 		left: 50%;
@@ -124,8 +120,12 @@
 	}
 }
 
-.field {
+.field__contact {
 	margin-bottom: 10px;
+}
+
+.field__textarea {
+	margin-bottom: 20px;
 }
 
 .consent {
