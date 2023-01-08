@@ -37,6 +37,10 @@
 	padding: 40px;
 	width: 450px;
 	
+	@media screen and (max-width: $mobile) {
+		width: 95%;
+	}
+
 	@media screen and (min-width: $desktop) {
 		top: 50%;
 		left: 50%;

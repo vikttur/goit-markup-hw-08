@@ -1307,6 +1307,11 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: opacity var(--time-animation) var(--timing-function) var(--time-animation), transform var(--time-animation) var(--timing-function) var(--time-animation);
 }
+@media screen and (max-width: 480px) {
+  .feedback-form {
+    width: 95%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .feedback-form {
     top: 50%;
