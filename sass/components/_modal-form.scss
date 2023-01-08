@@ -34,9 +34,19 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	// width: 450px;
-	max-width: 450px;
 	padding: 40px;
+	width: 450px;
+	
+	@media screen and (max-width: $mobile) {
+		width: 95%;
+	}
+	
+	@media screen and (min-width: $desktop) {
+		top: 50%;
+		left: 50%;
+
+		width: 528px;
+	}
 
 	font-family: inherit;
 	justify-content: center;
@@ -59,8 +69,13 @@
 		text-align: center;
 		font-weight: 700;
 		font-size: 20px;
-		line-height: 1.15;
+		line-height: 1.5;
 		color: var(--color-header);
+
+		@media screen and (min-width: $desktop) {
+			font-size: 20px;
+			line-height: 1.15;
+		}
 	}
 
 	&__submit-button {
@@ -106,20 +121,6 @@
 
 	&__close-icon {
 		fill: currentColor;
-	}
-
-	// change styles for viewport width
-	@media screen and (min-width: $tablet) {
-		// .backdrop {
-		// 		padding: 208px 159px;
-		// }
-
-		& {
-			top: 50%;
-			left: 50%;
-
-			max-width: 528px;
-		}
 	}
 }
 

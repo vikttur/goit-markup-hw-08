@@ -1297,8 +1297,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 450px;
   padding: 40px;
+  width: 450px;
   font-family: inherit;
   justify-content: center;
   align-items: center;
@@ -1309,13 +1309,31 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: opacity var(--time-animation) var(--timing-function) var(--time-animation), transform var(--time-animation) var(--timing-function) var(--time-animation);
 }
+@media screen and (max-width: 480px) {
+  .feedback-form {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feedback-form {
+    top: 50%;
+    left: 50%;
+    width: 528px;
+  }
+}
 .feedback-form__header {
   margin-bottom: 12px;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   color: var(--color-header);
+}
+@media screen and (min-width: 1200px) {
+  .feedback-form__header {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 .feedback-form__submit-button {
   min-width: 200px;
@@ -1347,13 +1365,6 @@ img {
 }
 .feedback-form__close-icon {
   fill: currentColor;
-}
-@media screen and (min-width: 768px) {
-  .feedback-form {
-    top: 50%;
-    left: 50%;
-    max-width: 528px;
-  }
 }
 
 .field {
